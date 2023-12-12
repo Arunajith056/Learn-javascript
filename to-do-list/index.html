@@ -6,22 +6,43 @@
     <title>Todo -list </title>
     <link rel="stylesheet" href="">
     <script src="index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .mg{
+           max-width:70%;
+        }
+    </style>
 </head>
-<body>
+<body class="container">
 
-    <center>
+    
         <h1>Create the To-do-List here</h1>
         <form autocomplete="off" id="fm" required>
-            <input type="text" name="name" id="inp">
-            <button type="button" id="bt">button</button>
+            <div class="mb-3 mg">
+                <label for="exampleFormControlTextarea1" class="form-label">Enter your list </label>
+                <textarea class="form-control" id="inp" rows="3"></textarea>
+              </div>
+            <button type="button" id="bt" class ="btn btn-primary">Add</button>
         </form><br><br>
 
         <h3>Your added list here:</h3>
-        <ul id="myList">
+         <!-- Create a table with two columns -->
+         <table class="table table-primary" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Added List</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="myList">
+                <!-- Existing table content goes here -->
+            </tbody>
+        </table>
+        
+   
 
-        </ul>
-    </center>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
